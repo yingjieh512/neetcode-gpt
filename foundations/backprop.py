@@ -15,7 +15,7 @@ class Solution:
         # Return: (dL_dw rounded to 5 decimals, dL_db rounded to 5 decimals)
         z=np.dot(x,w)+b
         y_hat=1/(1+np.exp(-z))
-        loss=0.5*(y_hat-y_true)
+        loss=0.5*(y_hat-y_true)**2
         # Sigmoid 的导数
         dy_dz = y_hat * (1 - y_hat)
         dL_dy=y_hat-y_true
